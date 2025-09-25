@@ -66,6 +66,7 @@ body {
 /*Segunda seccion*/
 .strategy-2nd-container {
   width: 100%;
+  height: auto;
   background-color: #f94f4f;
   display: flex;
   justify-content: center;
@@ -135,7 +136,7 @@ body {
   }
   .strategy-logo {
     position: relative;
-    left: -7px;
+    left: -67px;
     top: 134;
   }
   .strategy-text-container {

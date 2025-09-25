@@ -3,6 +3,7 @@ import Header from "@/app/components/Header/Header";
 import React from "react";
 import "../pages/LandingPage.css";
 import Strategy from "@/app/components/Strategy/Strategy";
+import Guidelines from "@/app/components/Guidelines/Guidelines";
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export default function LandingPage() {
       <div className="strategy-container">
         <Strategy />
       </div>
+      <div className="guidelines-container"></div>
     </div>
   );
 }
