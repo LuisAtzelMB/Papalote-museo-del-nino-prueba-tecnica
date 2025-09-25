@@ -110,6 +110,7 @@ body {
   padding: 23;
   font-weight: 800;
   background-color: #191921;
+  min-width: 190px;
 }
 .btn-schedule-call:hover {
   background-color: #434356;

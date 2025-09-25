@@ -1,6 +1,7 @@
 import BrandingDesign from "@/app/components/BrandingDesign/BrandingDesign";
 import Header from "@/app/components/Header/Header";
 import React from "react";
+import "../pages/LandingPage.css";
 
 export default function LandingPage() {
   return (
