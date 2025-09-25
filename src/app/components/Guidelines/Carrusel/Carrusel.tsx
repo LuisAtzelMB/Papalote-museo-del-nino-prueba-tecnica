@@ -19,7 +19,6 @@ interface Project {
 }
 
 // 2. Definir la interfaz para los métodos que se exponen al padre (Guidelines)
-// Esta era la interfaz que causaba el error de exportación/importación.
 interface CarruselRef {
   prev: () => void;
   next: () => void;
@@ -71,8 +70,7 @@ const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
     next: nextSlide,
   }));
 
-  // Autoplay functionality: Este es el código que se ajustó para evitar el scroll.
-  // Utiliza la forma funcional de setState para no depender de currentIndex en el array de dependencias.
+  // Autoplay functionality
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -90,22 +88,31 @@ const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
         className="carrusel-track"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
-        {projects.map((project, index) => (
-          <div key={index} className="carrusel-item">
-            {/* Componente Image con dimensiones optimizadas */}
-            <Image
-              src={project.src}
-              alt={project.alt}
-              width={700} // Dimensiones optimizadas para un carrusel grande
-              height={700}
-              className="carrusel-image"
-            />
-            <div className="project-info">
-              <p className="project-text">{project.text}</p>
-              <p className="project-year">{project.year}</p>
+        {projects.map((project, index) => {
+          // CLAVE: Determina si es una de las imágenes altas
+          const isTallImage =
+            project.src === "/images/project2.jpg" ||
+            project.src === "/images/project3.jpg";
+
+          return (
+            <div key={index} className="carrusel-item">
+              {/* Componente Image con clase condicional */}
+              <Image
+                src={project.src}
+                alt={project.alt}
+                width={900} // Aumentado para mayor calidad en el carrusel
+                height={900} // Aumentado para mayor calidad en el carrusel
+                className={`carrusel-image ${
+                  isTallImage ? "carrusel-image-tall" : ""
+                }`}
+              />
+              <div className="project-info">
+                <p className="project-text">{project.text}</p>
+                <p className="project-year">{project.year}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
