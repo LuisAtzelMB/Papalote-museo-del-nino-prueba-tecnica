@@ -1,0 +1,174 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.strategy-image {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -5px;
+}
+
+.strategy-text-top {
+  background-color: #191921;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.strategy-logo {
+  position: relative;
+  top: -30px;
+  left: 10vw;
+  align-self: start;
+}
+.strategy-text-container {
+  width: 80%;
+  padding-bottom: 150px;
+}
+.strategy-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+.strategy-title p {
+  color: #f94f4f;
+  margin: 0 15px 0 0;
+
+  padding: 0;
+}
+.strategy-title div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.strategy-logo {
+  width: 135px;
+}
+.strategy-description {
+  font-size: 18;
+}
+.strategy-link {
+  display: inline-block;
+  padding: 1rem 0rem;
+  color: #f94f4f;
+  border-bottom: 2px solid #f94f4f;
+  font-weight: 800; /* Extra bold */
+  text-decoration: none; /* Elimina el subrayado por defecto */
+}
+
+.strategy-link:hover {
+  color: #ff9393;
+  border-bottom: 2px solid #ff9393;
+}
+
+/*Segunda seccion*/
+.strategy-2nd-container {
+  width: 100%;
+  background-color: #f94f4f;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.strategy-steps-container {
+  background-color: #f94f4f;
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 150px;
+}
+.strategy-approach {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0;
+  width: 60%;
+}
+
+/*Steps*/
+.steps {
+  position: relative;
+  max-width: 60%;
+}
+.steps h1 {
+  font-size: 80;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.25);
+  position: relative;
+  left: 0;
+  margin: 0;
+}
+.steps h1 {
+  top: 80px;
+  left: -20px;
+}
+.steps h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+.steps p {
+  font-size: 18px;
+}
+.steps h2,
+.steps p {
+  color: #ffffff;
+  line-height: 32px;
+}
+
+/*Descktop*/
+@media (min-width: 870px) {
+  .strategy-1rst-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .strategy-image {
+    width: 50%;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .strategy-text-top {
+    width: 50%;
+    height: auto;
+  }
+  .strategy-logo {
+    position: relative;
+    left: -7px;
+    top: 134;
+  }
+  .strategy-text-container {
+    position: relative;
+    left: 90px;
+    top: 20px;
+    max-width: 60%;
+  }
+  .strategy-2nd-container {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+  }
+  .strategy-approach {
+    background-color: transparent;
+    width: 40%;
+    height: auto;
+    flex-wrap: wrap;
+    position: relative;
+    left: 8vw;
+    z-index: 2;
+    margin: 0;
+    color: #000000;
+    top: -190px;
+  }
+  .strategy-approach p {
+    width: 40vw;
+  }
+  .strategy-steps-container {
+    width: 70%;
+    height: auto;
+    position: relative;
+    left: 0px;
+    top: -8vw;
+  }
+}
