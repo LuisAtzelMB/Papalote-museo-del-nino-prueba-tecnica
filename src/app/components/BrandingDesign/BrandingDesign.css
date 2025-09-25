@@ -6,11 +6,11 @@ body {
 /* Contenedor principal para la superposición */
 .branding-container {
   display: flex;
-  flex-direction: column; /* En móviles, la imagen va arriba */
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: auto; /* Se ajusta al contenido */
+  height: auto;
   overflow: hidden;
   position: relative;
 }
@@ -30,7 +30,7 @@ body {
 /* Contenedor del texto */
 .branding-text {
   padding: 50px;
-  max-width: 100%; /* El texto ocupa el 100% del ancho en móviles */
+  max-width: 100%;
   position: relative;
 }
 
@@ -75,21 +75,21 @@ body {
 /* === MEDIA QUERIES para pantallas grandes (desktop) === */
 @media (min-width: 768px) {
   .branding-container {
-    display: block; /* Usa block para que los hijos absolutos funcionen */
-    height: auto; /* La altura se adaptará al contenido */
+    display: block;
+    height: auto;
   }
 
   /* Aplica la superposición */
   .branding-image-div {
-    position: absolute; /* Se superpone */
+    position: absolute;
     top: 0;
-    right: 0; /* CAMBIO CLAVE: Se pega al borde derecho */
+    right: 0;
     width: 100%;
-    height: 100%; /* Ocupa la misma altura que su padre */
+    height: 100%;
   }
 
   .branding-image {
-    width: 100%; /* CAMBIO: La imagen siempre ocupa el 100% del ancho de su contenedor */
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: right top;
@@ -97,7 +97,7 @@ body {
 
   /* El contenedor de texto se superpone a la imagen */
   .branding-text {
-    position: relative; /* Se coloca sobre la imagen */
+    position: relative;
     z-index: 2;
     padding: 0 112px 50px 10%;
     max-width: 40%;
