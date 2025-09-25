@@ -110,7 +110,7 @@
     width: 60%;
     flex-shrink: 0;
     /* Asegura que el carrusel ocupe la mitad derecha */
-    height: auto;
+    height: 900px;
     min-height: 100%; /* Asegura que tome toda la altura del guidelines-main-container */
   }
 

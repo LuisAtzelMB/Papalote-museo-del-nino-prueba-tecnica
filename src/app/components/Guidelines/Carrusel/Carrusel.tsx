@@ -34,16 +34,16 @@ const projects: Project[] = [
     year: "2019 Project",
   },
   {
-    src: "/images/project1.jpg",
+    src: "/images/project2.jpg",
     alt: "Brand Identity Creation Image",
-    text: "Brand Identity Creation",
-    year: "2020 Project",
+    text: "GYMEffective",
+    year: "2025 created entirely by myself",
   },
   {
-    src: "/images/project1.jpg",
+    src: "/images/project3.jpg",
     alt: "Website Redesign Image",
-    text: "Website Redesign",
-    year: "2021 Project",
+    text: "websites specially made for you",
+    year: "2024 Software created for Begomx, powered by a real API.",
   },
 ];
 
