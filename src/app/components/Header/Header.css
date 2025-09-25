@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para el contenedor principal del header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.header-logo-div {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  width: 60%; /* Asegura que ocupe todo el ancho disponible del contenedor padre */
+}
+
+/* Oculta la navegación principal en móviles, pero muestra el botón de hamburguesa */
+.header-navbar-div {
+  display: none;
+  background-color: #f94f4f;
+  width: 50%;
+  height: 100%;
+}
+.header-logo-img {
+  width: 161px;
+  height: 30px;
+}
+
+.hamburger-btn {
+  display: block; /* Muestra el botón de hamburguesa en móvil */
+  background: none;
+  border: none;
+  color: #979797;
+  font-size: 32px;
+  cursor: pointer;
+  margin: 25px 50px;
+}
+
+/* Estilos para el menú modal (oculto por defecto) */
+.mobile-menu {
+  /* CAMBIO: Se posiciona en relación al header */
+  position: absolute;
+  top: 100%; /* CAMBIO: Se ubica justo debajo del header */
+  right: 50px; /* CAMBIO: Posiciona el modal a la derecha, para que coincida con tu margen del botón */
+  width: 252px; /* CAMBIO: Ancho especificado */
+  height: 292px; /* CAMBIO: Altura especificada */
+  background-color: #191921;
+  z-index: 1000;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* AÑADIDO: Sombra para el modal */
+  display: none; /* Mantenemos este display para ocultar/mostrar */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* CAMBIO: Quitamos el translateY que ya no se necesita con top:100% */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform-origin: top right; /* CAMBIO: La transición se origina en la esquina superior derecha */
+  opacity: 0;
+}
+
+.mobile-menu.is-open {
+  display: flex; /* CAMBIO: Muestra el menú cuando tiene la clase 'is-open' */
+  opacity: 1; /* AÑADIDO: Se hace visible */
+}
+
+/* Y esto lo agregas para el efecto de la X */
+.hamburger-btn.is-open {
+  color: #fff; /* Color de la X */
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.mobile-menu-content .btn-schedule-call {
+  color: #ffffff;
+  background-color: #f94f4f;
+  font-size: 16px;
+}
+
+.mobile-menu-content .normal-btn-header {
+  font-size: 18px;
+}
+
+/* === Estilos para los botones de navegación === */
+.nav-btn {
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Commissioner", sans-serif;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+}
+
+.normal-btn-header:hover {
+  font-weight: 700;
+}
+
+.btn-schedule-call {
+  padding: 23;
+  font-weight: 800;
+  background-color: #191921;
+}
+.btn-schedule-call:hover {
+  background-color: #434356;
+}
+
+/* === MEDIA QUERIES para pantallas grandes (desktop) === */
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo-div {
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    /* Asegura que ocupe todo el ancho disponible del contenedor padre */
+  }
+  /* Oculta el botón de hamburguesa en desktop */
+  .hamburger-btn {
+    display: none;
+  }
+
+  /* Muestra la navegación principal en desktop */
+  .header-navbar-div {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 16px;
+    width: 40%;
+    padding: 50px 10%;
+  }
+
+  /* Oculta el menú modal en desktop */
+  .mobile-menu {
+    display: none;
+  }
+}

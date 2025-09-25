@@ -15,13 +15,13 @@
   --border-gray: #b8b8b8;
 
   /* Espaciado */
-  --spacing-xxs: 0.5rem; /* 8px */
-  --spacing-xs: 1rem; /* 16px */
-  --spacing-sm: 1.5rem; /* 24px */
-  --spacing-md: 2rem; /* 32px */
-  --spacing-lg: 4rem; /* 64px */
-  --spacing-xl: 6rem; /* 96px */
-  --spacing-xxl: 9rem; /* 144px */
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 1rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+  --spacing-xxl: 9rem;
   --average-margin-top: 150px;
 }
 
@@ -61,7 +61,7 @@ body {
 }
 
 .main-title {
-  font-size: 2.5rem; /* Menor font-size para móviles */
+  font-size: 2.5rem;
   font-weight: 900;
   margin: 0;
 }
@@ -128,7 +128,7 @@ body {
 .typography-section {
   margin-top: var(--average-margin-top);
   display: grid;
-  grid-template-columns: 1fr; /* Una columna en móvil */
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
 }
 
@@ -152,20 +152,20 @@ body {
   margin: 0;
 }
 .h1-style {
-  font-size: 2.5rem; /* Menor font-size para móviles */
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 .h2-style {
-  font-size: 2rem; /* Menor font-size para móviles */
+  font-size: 2rem;
   line-height: 1.14;
 }
 .h3-style {
-  font-size: 1.25rem; /* Menor font-size para móviles */
+  font-size: 1.25rem;
   line-height: 1.6;
 }
 
 .body-paragraph {
-  font-size: 1rem; /* Menor font-size para móviles */
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.78;
   color: var(--text-black);
@@ -174,9 +174,7 @@ body {
 
 /* === Sección de Botones === */
 .buttons-section {
-  /* Use grid instead of flexbox for precise control */
   display: grid;
-  /* Define grid columns to fit button groups */
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   justify-content: center;
   gap: 10vw;
@@ -187,21 +185,18 @@ body {
 .button-style-group {
   display: flex;
   flex-direction: column;
-  /* Gap between default and hover buttons */
   gap: 28px;
   align-items: center;
 }
 
 .button-state-label {
-  font-size: 16px; /* Label font size */
+  font-size: 16px;
   font-weight: 400;
   color: var(--matte-black);
 }
 
 .btn {
-  /* Remove inherited padding from button group */
   padding: 0;
-  /* Set button dimensions with fixed sizes */
   width: 140px;
   height: 72px;
   font-size: 18px;
@@ -210,13 +205,11 @@ body {
   border: none;
   transition: all 0.3s ease;
   text-align: center;
-  /* Use flexbox to center content vertically and horizontally */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Maintain specific button styles */
 .btn-primary,
 .btn-secondary {
   color: var(--bg-white);
@@ -254,7 +247,6 @@ body {
   transition: all 0.3s ease;
 }
 .btn-tertiary:hover div {
-  /* Cambia el color del borde del div */
   border-bottom-color: #ff9393;
 }
 
@@ -263,18 +255,17 @@ body {
 }
 
 .icon-arrow {
-  display: flex; /* Asegura que el contenido se centre */
+  display: flex;
   justify-content: center;
   align-items: center;
   color: #f94f4f;
-  border-radius: 50%; /* Crea un círculo perfecto */
+  border-radius: 50%;
   border: 1px #f94f4f solid;
   font-weight: 200;
   width: 40px;
-  height: 40px; /* Asegura que sea un cuadrado para que el border-radius funcione */
+  height: 40px;
 }
 
-/* Estilo para el botón primario en estado de hover */
 .btn-primary.hover {
   background-color: #ff9393;
 }
@@ -296,7 +287,7 @@ body {
 }
 
 /* === MEDIA QUERIES para pantallas grandes (desktop) === */
-@media (min-width: 768px) {
+@media (min-width: 870px) {
   .design-system-content-container {
     padding: 0 var(--spacing-xxl);
   }
