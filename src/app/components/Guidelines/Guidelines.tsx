@@ -30,19 +30,28 @@ function Guidelines() {
   return (
     <div className="guidelines-main-container">
       <div className="carrusel-btns-text-container">
-        <h1 className="heading">
-          Brand naming & <br /> guidelines
-        </h1>
-        <div className="carrusel-btns">
-          {/* Aplicamos los handlers modificados */}
-          <button onClick={handlePrev} className="carrusel-button">
-            {/* Flecha Izquierda */}
-            &lt;
-          </button>
-          <button onClick={handleNext} className="carrusel-button">
-            {/* Flecha Derecha */}
-            &gt;
-          </button>
+        <div className="carrusel-btns-relative-div">
+          <Image
+            src={"./images/~blanco.svg"}
+            alt="Logo de la marca"
+            width={134}
+            height={60}
+            className="logo-svg"
+          />
+          <h1 className="heading">
+            Brand naming & <br /> guidelines
+          </h1>
+          <div className="carrusel-btns">
+            {/* Aplicamos los handlers modificados */}
+            <button onClick={handlePrev} className="carrusel-button">
+              {/* Flecha Izquierda */}
+              &lt;
+            </button>
+            <button onClick={handleNext} className="carrusel-button">
+              {/* Flecha Derecha */}
+              &gt;
+            </button>
+          </div>
         </div>
       </div>
 

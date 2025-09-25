@@ -3,10 +3,12 @@
   position: relative;
   overflow-x: hidden;
   min-height: 60vh;
-  background-color: #191921;
   overflow: hidden;
   display: flex;
   flex-direction: column-reverse;
+}
+.logo-svg {
+  display: none;
 }
 
 /* El texto y botones ocupa todo el ancho en móvil */
@@ -41,7 +43,7 @@
 
 .carrusel-button {
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid #f94f4f;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -49,9 +51,13 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: #f94f4f;
   font-size: 1.5rem;
   line-height: 1;
+}
+.carrusel-button:hover {
+  border: 2px solid #ff9393;
+  color: #ff9393;
 }
 
 @media (min-width: 870px) {
@@ -62,20 +68,46 @@
     align-items: stretch;
     min-height: 80vh; /* Aumenta la altura para un mejor visual */
   }
+  .logo-svg {
+    display: block;
+    position: relative; /* CLAVE 1: Debe ser absoluto para posicionarse */
+
+    /* Mueve el logo a la derecha de su padre (.carrusel-btns-relative-div) */
+    right: -23.5vw;
+
+    /* Mueve el logo al 50% de la altura de su padre */
+    top: 35%;
+
+    /* CLAVE 2: Ajusta la posición -50% de su propia altura para centrarlo */
+    transform: translateY(-50%);
+
+    z-index: 102;
+  }
+
+  .carrusel-btns-relative-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #191921;
+    width: 48vw;
+    z-index: 101;
+    height: 500px;
+  }
 
   /* 2. Contenedor de Texto y Botones: Fija al 50% */
   .carrusel-btns-text-container {
-    width: 50%;
+    background-color: transparent;
+    width: 40%;
     flex-shrink: 0;
-    padding: 4rem; /* Más padding para escritorio */
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
   }
 
   /* 3. Contenedor del Carrusel: Fija al 50% y pegado a la derecha */
   .carrusel-div {
-    width: 50%;
+    width: 60%;
     flex-shrink: 0;
     /* Asegura que el carrusel ocupe la mitad derecha */
     height: auto;
@@ -84,7 +116,12 @@
 
   /* Ajuste de tipografía en escritorio */
   .heading {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 2rem;
+    max-width: 50%;
+  }
+  .carrusel-btns {
+    align-self: start;
+    padding-left: 12vw;
   }
 }

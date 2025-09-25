@@ -4,6 +4,7 @@ import React from "react";
 import "../pages/LandingPage.css";
 import Strategy from "@/app/components/Strategy/Strategy";
 import Guidelines from "@/app/components/Guidelines/Guidelines";
+import ContactSection from "@/app/components/ContactSection/ContactSection";
 
 export default function LandingPage() {
   return (
@@ -17,6 +18,9 @@ export default function LandingPage() {
       </div>
       <div className="guidelines-container">
         <Guidelines />
+      </div>
+      <div className="landingPage-contact-section">
+        <ContactSection />
       </div>
     </div>
   );
