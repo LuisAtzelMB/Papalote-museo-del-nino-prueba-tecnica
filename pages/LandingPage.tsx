@@ -15,7 +15,9 @@ export default function LandingPage() {
       <div className="strategy-container">
         <Strategy />
       </div>
-      <div className="guidelines-container"></div>
+      <div className="guidelines-container">
+        <Guidelines />
+      </div>
     </div>
   );
 }

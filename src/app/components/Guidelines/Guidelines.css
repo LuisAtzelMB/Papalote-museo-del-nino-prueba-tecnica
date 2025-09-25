@@ -1,37 +1,45 @@
-.guidelines-container {
+.guidelines-main-container {
+  /* Por defecto, se apila (comportamiento de bloque/columna) */
+  position: relative;
   overflow-x: hidden;
+  min-height: 60vh;
+  background-color: #191921;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.top-section {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  min-height: 100vh;
-  background-color: #191921;
+/* El texto y botones ocupa todo el ancho en móvil */
+.carrusel-btns-text-container {
+  width: 100%;
   color: #fff;
   padding: 2rem;
+  background-color: #191921;
 }
 
-.left-content {
+.carrusel-div {
+  /* El carrusel ocupa todo el ancho debajo del texto en móvil */
+  width: 100%;
   position: relative;
-  z-index: 2;
-  flex-grow: 1;
-  padding-bottom: 2rem;
+  overflow: hidden;
+  height: 60vh; /* Altura que tendrá el carrusel en móvil/escritorio */
 }
+
+/* --- Estilos del Botón y Títulos (Válido para todos) --- */
 
 .heading {
-  font-size: 2.5rem;
+  font-size: 2.5rem; /* Tamaño de encabezado móvil */
   font-weight: 800;
   line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
-.buttons-container {
+.carrusel-btns {
   display: flex;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
-.carousel-button {
+.carrusel-button {
   background: transparent;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -41,157 +49,42 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-
-.carousel-button svg {
-  width: 20px;
-  height: 20px;
-}
-
-/* Carrusel */
-.right-content {
-  position: relative;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-top: 2rem;
-}
-
-.image-carousel {
-  position: relative;
-  width: 100%;
-  height: auto;
-  padding-bottom: 2rem;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-item {
-  min-width: 100%;
-  position: relative;
-}
-
-.carousel-image {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.project-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.project-text {
-  margin: 0;
-  font-weight: bold;
-}
-
-.project-year {
-  margin: 0;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.bottom-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 4rem 2rem;
-  background-color: #fff;
-}
-
-.bottom-text {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-}
-
-.schedule-button {
-  background-color: #f94f4f;
   color: #fff;
-  padding: 1rem 2.5rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  box-shadow: 0 8px 0 0 #282828;
-  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
-.schedule-button:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 0 0 #282828;
-}
-
-/* Media Query para escritorio */
-@media (min-width: 1024px) {
-  .top-section {
-    flex-direction: row;
-    align-items: center;
-    min-height: 80vh;
-    padding: 0;
-  }
-
-  .left-content {
-    width: 40%;
-    height: 100%;
+@media (min-width: 870px) {
+  /* 1. Contenedor principal: Aplica Flexbox para la alineación en fila */
+  .guidelines-main-container {
     display: flex;
-    align-items: center;
-    padding: 0 4rem;
+    flex-direction: row; /* CLAVE: Alineación horizontal */
+    align-items: stretch;
+    min-height: 80vh; /* Aumenta la altura para un mejor visual */
   }
 
-  .text-buttons-container {
-    padding-left: 2rem;
+  /* 2. Contenedor de Texto y Botones: Fija al 50% */
+  .carrusel-btns-text-container {
+    width: 50%;
+    flex-shrink: 0;
+    padding: 4rem; /* Más padding para escritorio */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
   }
 
+  /* 3. Contenedor del Carrusel: Fija al 50% y pegado a la derecha */
+  .carrusel-div {
+    width: 50%;
+    flex-shrink: 0;
+    /* Asegura que el carrusel ocupe la mitad derecha */
+    height: auto;
+    min-height: 100%; /* Asegura que tome toda la altura del guidelines-main-container */
+  }
+
+  /* Ajuste de tipografía en escritorio */
   .heading {
-    font-size: 4rem;
-  }
-
-  .right-content {
-    width: 60%;
-    height: 100%;
-    margin-top: 0;
-    position: relative;
-  }
-
-  .image-carousel {
-    height: 100%;
-    padding-bottom: 0;
-  }
-
-  .carousel-item {
-    height: 100%;
-  }
-
-  .carousel-image {
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .buttons-container {
-    position: absolute;
-    bottom: 5rem;
-    left: 4rem;
-  }
-
-  .bottom-section {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 4rem 8rem;
-    text-align: left;
-  }
-
-  .bottom-text {
-    margin-bottom: 0;
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
   }
 }
