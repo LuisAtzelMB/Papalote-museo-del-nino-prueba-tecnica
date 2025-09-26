@@ -16,7 +16,7 @@ export default function ContactSection() {
         className="logo-svg-contact"
       />
       <div className="contactSection-btn-tex">
-        <h1>Let's build something great together.</h1>
+        <h1>Let&apos;s build something great together.</h1>
         <button onClick={scheduleCall} className="contactSection-btn">
           Schedule a Call
         </button>
