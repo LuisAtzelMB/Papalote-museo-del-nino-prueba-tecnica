@@ -17,7 +17,9 @@ export default function ContactSection() {
       />
       <div className="contactSection-btn-tex">
         <h1>Let's build something great together.</h1>
-        <button onClick={scheduleCall}>Schedule a Call</button>
+        <button onClick={scheduleCall} className="contactSection-btn">
+          Schedule a Call
+        </button>
       </div>
     </div>
   );

@@ -40,6 +40,18 @@ const projects: Project[] = [
     text: "websites specially made for you",
     year: "2024 Software created for Begomx, powered by a real API.",
   },
+  {
+    src: "/images/project4.jpg",
+    alt: "New Majestic Hotel",
+    text: "New Majestic Hotel",
+    year: "2018 Project",
+  },
+  {
+    src: "/images/project5.jpg",
+    alt: "Crypto Dashboard",
+    text: "Crypto Dashboard",
+    year: "2016 Project",
+  },
 ];
 
 const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
@@ -88,8 +100,7 @@ const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
               <Image
                 src={project.src}
                 alt={project.alt}
-                width={900}
-                height={900}
+                fill
                 className={`carrusel-image ${
                   isTallImage ? "carrusel-image-tall" : ""
                 }`}

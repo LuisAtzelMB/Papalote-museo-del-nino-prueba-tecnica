@@ -33,16 +33,18 @@
 }
 
 .contactSection-btn-tex button {
-  width: 199px;
-  height: 64px;
+  padding: 30px;
   background-color: #f94f4f;
   color: white;
   border: none;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 800;
+}
+.contactSection-btn:hover {
+  background-color: #ff9393;
 }
 @media (max-width: 1064) {
   .logo-svg-contact {
@@ -59,9 +61,7 @@
 
   .contactSection-btn-tex {
     flex-direction: column;
-
     align-items: flex-start;
-
     padding-left: 5%;
   }
 

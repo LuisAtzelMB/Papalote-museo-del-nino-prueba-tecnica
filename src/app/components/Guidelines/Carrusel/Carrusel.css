@@ -43,10 +43,10 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 1rem;
+  padding: 4rem;
   background: rgba(25, 25, 33, 0.7);
   color: white;
-  text-align: center;
+  text-align: end;
 }
 
 .project-text {

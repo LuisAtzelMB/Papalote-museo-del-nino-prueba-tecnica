@@ -1,8 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import "./index.css"; // Importación corregida a ruta relativa
+import "./index.css";
 
-// Definición de tipos para los datos del formulario
 interface FormData {
   name: string;
   email: string;
@@ -10,7 +9,6 @@ interface FormData {
   message: string;
 }
 
-// Definición de tipos para los errores de validación
 interface Errors {
   name?: string;
   email?: string;
@@ -29,7 +27,7 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
-  // Paleta de colores vibrantes para un toque "Papalote"
+  // Paleta de colores vibrantes
   const colorPalette = {
     primary: "#007BFF", // Azul brillante
     secondary: "#FFC300", // Amarillo vibrante
@@ -68,7 +66,6 @@ export default function ContactForm() {
       ...prevData,
       [name]: value,
     }));
-    // Limpiar el error cuando el usuario comienza a escribir
     if (errors[name as keyof Errors]) {
       setErrors((prevErrors) => ({ ...prevErrors, [name]: undefined }));
     }

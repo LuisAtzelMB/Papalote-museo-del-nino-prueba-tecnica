@@ -10,8 +10,8 @@ export default function BrandingDesign() {
         <Image
           src={"/images/workingPeople.png"}
           alt="Gente trabajando en la marca"
-          width={895}
-          height={800}
+          width={1080}
+          height={1080}
           className="branding-image"
         />
       </div>
