@@ -34,9 +34,9 @@ export default function Strategy() {
               strategic.
             </h1>
             <p className="strategy-description">
-              "A well-crafted design strategy consistently produces desired
+              &quot;A well-crafted design strategy consistently produces desired
               outcomes and brand awareness. We are firm believers that success
-              lies in creative collaboration with our clients."
+              lies in creative collaboration with our clients.&quot;
             </p>
             <a onClick={scheduleCall} className="strategy-link">
               Schedule a Call
