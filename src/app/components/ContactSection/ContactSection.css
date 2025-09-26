@@ -52,14 +52,15 @@
 }
 
 .contactSection-btn-tex h1 {
-  font-size: 2rem;
+  font-size: 5rem;
+  max-width: 50%;
   margin-bottom: 1rem;
 }
 
 .contactSection-btn-tex button {
   width: 199px;
   height: 64px;
-  background-color: #f94f4f; /* Color de botón (rojo del carrusel) */
+  background-color: #f94f4f;
   color: white;
   border: none;
   cursor: pointer;
@@ -84,26 +85,21 @@
   .contactSection-btn-tex {
     flex-direction: column;
 
-    /* CLAVE 1: Pega el texto y el botón a la izquierda */
     align-items: flex-start;
 
-    /* Añade un padding general a la izquierda para el margen visual */
     padding-left: 5%;
   }
 
   .contactSection-btn-tex h1 {
-    /* CLAVE 2: Asegura que el texto dentro del h1 se alinee a la izquierda */
     text-align: left;
     font-size: 32px;
     font-weight: 800px;
-    /* Eliminamos los márgenes a la derecha y ajustamos a 0 */
     margin-right: 0;
     padding-left: 0;
-    width: 100%; /* Ocupa todo el ancho disponible */
+    width: 100%;
   }
 
   .contactSection-btn-tex button {
-    /* Ajustamos el margen del botón a la izquierda (el padding del padre ya lo aleja) */
     margin-right: 0;
   }
 }

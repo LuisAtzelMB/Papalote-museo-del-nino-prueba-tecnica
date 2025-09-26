@@ -1,6 +1,6 @@
 .carrusel-track-wrapper {
   overflow: hidden;
-  height: 100%; /* Ocupa la altura del .carrusel-div */
+  height: 100%;
 }
 
 .carrusel-track {
@@ -14,11 +14,10 @@
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra la imagen horizontalmente */
-  justify-content: center; /* Centra la imagen verticalmente */
+  align-items: center;
+  justify-content: center;
   height: 100%;
 
-  /* CLAVE: Fondo para rellenar el espacio alrededor de la imagen */
   background-color: #191921;
 
   position: relative;
@@ -36,11 +35,9 @@
 /* --- ESTILO ESPECÍFICO PARA IMÁGENES ALTAS --- */
 /* ---------------------------------------------------- */
 .carrusel-image-tall {
-  /* CLAVE: Ajusta la imagen completa dentro del contenedor sin recortarla. */
   object-fit: contain !important;
 }
 
-/* Información del proyecto superpuesta (ajustada para móvil/escritorio) */
 .project-info {
   position: absolute;
   bottom: 0;

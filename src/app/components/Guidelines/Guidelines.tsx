@@ -12,16 +12,15 @@ interface CarruselRef {
 function Guidelines() {
   const carruselRef = useRef<CarruselRef>(null);
 
-  // Modificamos las funciones para aceptar el evento de React y prevenir el comportamiento por defecto
   const handlePrev = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); // <-- CLAVE: Previene el desplazamiento
+    e.preventDefault();
     if (carruselRef.current) {
       carruselRef.current.prev();
     }
   };
 
   const handleNext = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); // <-- CLAVE: Previene el desplazamiento
+    e.preventDefault();
     if (carruselRef.current) {
       carruselRef.current.next();
     }
@@ -42,7 +41,6 @@ function Guidelines() {
             Brand naming & <br /> guidelines
           </h1>
           <div className="carrusel-btns">
-            {/* Aplicamos los handlers modificados */}
             <button onClick={handlePrev} className="carrusel-button">
               {/* Flecha Izquierda */}
               &lt;

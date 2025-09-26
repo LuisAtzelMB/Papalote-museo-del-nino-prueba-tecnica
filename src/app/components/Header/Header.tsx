@@ -2,11 +2,36 @@ import React, { useState } from "react";
 import Image from "next/image";
 import "@/app/components/Header/Header.css";
 
-export default function Header() {
+interface SectionRefs {
+  about: React.RefObject<HTMLDivElement | null>;
+  service: React.RefObject<HTMLDivElement | null>;
+  projects: React.RefObject<HTMLDivElement | null>;
+}
+
+interface HeaderProps {
+  sectionRefs: SectionRefs;
+}
+
+export default function Header({ sectionRefs }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToSection = (sectionName: keyof SectionRefs) => {
+    const ref = sectionRefs[sectionName];
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    }
+  };
+
+  const scheduleCall = () => {
+    window.location.href = "/Form";
   };
 
   return (
@@ -21,26 +46,57 @@ export default function Header() {
         />
       </div>
 
-      {/* Botón de Hamburguesa para móvil */}
       <button className="hamburger-btn" onClick={toggleMenu}>
         {isMenuOpen ? "x" : "☰"}
       </button>
 
-      {/* Menú de navegación principal (Desktop) */}
       <div className="header-navbar-div">
-        <button className="nav-btn normal-btn-header">About</button>
-        <button className="nav-btn normal-btn-header">Service</button>
-        <button className="nav-btn normal-btn-header">Projects</button>
-        <button className="nav-btn btn-schedule-call">Schedule a Call</button>
+        <button
+          className="nav-btn normal-btn-header"
+          onClick={() => scrollToSection("about")}
+        >
+          About
+        </button>
+        <button
+          className="nav-btn normal-btn-header"
+          onClick={() => scrollToSection("service")}
+        >
+          Service
+        </button>
+        <button
+          className="nav-btn normal-btn-header"
+          onClick={() => scrollToSection("projects")}
+        >
+          Projects
+        </button>
+        <button className="nav-btn btn-schedule-call" onClick={scheduleCall}>
+          Schedule a Call
+        </button>
       </div>
 
-      {/* Menú modal para móvil */}
       <div className={`mobile-menu ${isMenuOpen ? "is-open" : ""}`}>
         <div className="mobile-menu-content">
-          <button className="nav-btn normal-btn-header">About</button>
-          <button className="nav-btn normal-btn-header">Service</button>
-          <button className="nav-btn normal-btn-header">Projects</button>
-          <button className="nav-btn btn-schedule-call">Schedule a Call</button>
+          <button
+            className="nav-btn normal-btn-header"
+            onClick={() => scrollToSection("about")}
+          >
+            About
+          </button>
+          <button
+            className="nav-btn normal-btn-header"
+            onClick={() => scrollToSection("service")}
+          >
+            Service
+          </button>
+          <button
+            className="nav-btn normal-btn-header"
+            onClick={() => scrollToSection("projects")}
+          >
+            Projects
+          </button>
+          <button className="nav-btn btn-schedule-call" onClick={scheduleCall}>
+            Schedule a Call
+          </button>
         </div>
       </div>
     </header>

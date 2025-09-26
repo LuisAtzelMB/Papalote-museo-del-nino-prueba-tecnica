@@ -24,13 +24,11 @@
   width: 100%;
   position: relative;
   overflow: hidden;
-  height: 60vh; /* Altura que tendrá el carrusel en móvil/escritorio */
+  height: 60vh;
 }
 
-/* --- Estilos del Botón y Títulos (Válido para todos) --- */
-
 .heading {
-  font-size: 2.5rem; /* Tamaño de encabezado móvil */
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -61,26 +59,18 @@
 }
 
 @media (min-width: 870px) {
-  /* 1. Contenedor principal: Aplica Flexbox para la alineación en fila */
   .guidelines-main-container {
     display: flex;
-    flex-direction: row; /* CLAVE: Alineación horizontal */
+    flex-direction: row;
     align-items: stretch;
-    min-height: 80vh; /* Aumenta la altura para un mejor visual */
+    min-height: 80vh;
   }
   .logo-svg {
     display: block;
-    position: relative; /* CLAVE 1: Debe ser absoluto para posicionarse */
-
-    /* Mueve el logo a la derecha de su padre (.carrusel-btns-relative-div) */
+    position: relative;
     right: -23.5vw;
-
-    /* Mueve el logo al 50% de la altura de su padre */
     top: 35%;
-
-    /* CLAVE 2: Ajusta la posición -50% de su propia altura para centrarlo */
     transform: translateY(-50%);
-
     z-index: 102;
   }
 
@@ -95,7 +85,6 @@
     height: 500px;
   }
 
-  /* 2. Contenedor de Texto y Botones: Fija al 50% */
   .carrusel-btns-text-container {
     background-color: transparent;
     width: 40%;
@@ -105,16 +94,13 @@
     flex-direction: column;
   }
 
-  /* 3. Contenedor del Carrusel: Fija al 50% y pegado a la derecha */
   .carrusel-div {
     width: 60%;
     flex-shrink: 0;
-    /* Asegura que el carrusel ocupe la mitad derecha */
     height: 900px;
-    min-height: 100%; /* Asegura que tome toda la altura del guidelines-main-container */
+    min-height: 100%;
   }
 
-  /* Ajuste de tipografía en escritorio */
   .heading {
     font-size: 3rem;
     margin-bottom: 2rem;
