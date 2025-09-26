@@ -4,7 +4,7 @@ import "@/app/components/Strategy/Strategy.css";
 
 export default function Strategy() {
   const scheduleCall = () => {
-    window.location.href = "/Form";
+    window.location.href = "/landingPage/Form";
   };
   return (
     <div className="strategy-container">

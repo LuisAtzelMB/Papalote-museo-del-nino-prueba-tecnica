@@ -3,7 +3,7 @@ import "@/app/components/ContactSection/ContactSection.css";
 
 export default function ContactSection() {
   const scheduleCall = () => {
-    window.location.href = "/Form";
+    window.location.href = "/landingPage/Form";
   };
 
   return (

@@ -1,7 +1,8 @@
+"use client";
 import BrandingDesign from "@/app/components/BrandingDesign/BrandingDesign";
 import Header from "@/app/components/Header/Header";
 import React, { useRef } from "react";
-import "../pages/LandingPage.css";
+import "./LandingPage.css";
 import Strategy from "@/app/components/Strategy/Strategy";
 import Guidelines from "@/app/components/Guidelines/Guidelines";
 import ContactSection from "@/app/components/ContactSection/ContactSection";

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import Image from "next/image";
 import "@/app/components/Header/Header.css";
@@ -31,7 +32,7 @@ export default function Header({ sectionRefs }: HeaderProps) {
   };
 
   const scheduleCall = () => {
-    window.location.href = "/Form";
+    window.location.href = "/landingPage/Form";
   };
 
   return (
