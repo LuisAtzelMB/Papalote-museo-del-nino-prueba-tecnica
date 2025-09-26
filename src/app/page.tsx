@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function DesignSystem() {
+export default function Home() {
   return (
     <div className="design-system-container">
       <header className="header">
