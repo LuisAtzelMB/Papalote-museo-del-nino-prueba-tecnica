@@ -1,6 +1,13 @@
 # 🚀 PRUEBA TÉCNICA FRONT-END: Papalote Museo del Niño 🦋
 
 <img width="743" height="808" alt="imagen" src="https://github.com/user-attachments/assets/46da33bc-46cb-4ef5-86a8-7849d2953a78" />
+¡La página está lista para usarse!
+
+Estas son las rutas a seguir:
+
+https://papalote-museo-del-nino-prueba-tecn.vercel.app/
+https://papalote-museo-del-nino-prueba-tecn.vercel.app/landingPage
+https://papalote-museo-del-nino-prueba-tecn.vercel.app/landingPage/Form
 
 
 > **Desarrollado con las últimas tecnologías para garantizar calidad, rendimiento y una experiencia de usuario excepcional.**
