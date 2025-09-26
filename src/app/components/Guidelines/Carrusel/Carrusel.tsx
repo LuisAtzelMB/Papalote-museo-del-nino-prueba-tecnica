@@ -7,10 +7,8 @@ import React, {
   ForwardedRef,
 } from "react";
 import Image from "next/image";
-// Importación del CSS separado para los estilos del carrusel
 import "./Carrusel.css";
 
-// 1. Definir la interfaz para los datos de cada proyecto
 interface Project {
   src: string;
   alt: string;
@@ -18,13 +16,11 @@ interface Project {
   year: string;
 }
 
-// 2. Definir la interfaz para los métodos que se exponen al padre (Guidelines)
 interface CarruselRef {
   prev: () => void;
   next: () => void;
 }
 
-// Datos de los proyectos (tipado con Project[])
 const projects: Project[] = [
   {
     src: "/images/project1.jpg",
@@ -46,12 +42,10 @@ const projects: Project[] = [
   },
 ];
 
-// Usamos forwardRef para permitir que el componente Guidelines pueda manipular el estado interno.
 const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const projectsCount = projects.length;
 
-  // Lógica de navegación centralizada para avanzar/retroceder
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? projectsCount - 1 : prevIndex - 1
@@ -64,21 +58,17 @@ const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
     );
   };
 
-  // Exponer las funciones de navegación al componente padre (Guidelines) a través de la ref
   useImperativeHandle(ref, () => ({
     prev: prevSlide,
     next: nextSlide,
   }));
 
-  // Autoplay functionality
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
         prevIndex === projectsCount - 1 ? 0 : prevIndex + 1
       );
-    }, 5000); // Cambia cada 5 segundos
-
-    // Función de limpieza
+    }, 5000);
     return () => clearInterval(interval);
   }, [projectsCount]);
 
@@ -89,19 +79,17 @@ const Carrusel = forwardRef((props, ref: ForwardedRef<CarruselRef>) => {
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {projects.map((project, index) => {
-          // CLAVE: Determina si es una de las imágenes altas
           const isTallImage =
             project.src === "/images/project2.jpg" ||
             project.src === "/images/project3.jpg";
 
           return (
             <div key={index} className="carrusel-item">
-              {/* Componente Image con clase condicional */}
               <Image
                 src={project.src}
                 alt={project.alt}
-                width={900} // Aumentado para mayor calidad en el carrusel
-                height={900} // Aumentado para mayor calidad en el carrusel
+                width={900}
+                height={900}
                 className={`carrusel-image ${
                   isTallImage ? "carrusel-image-tall" : ""
                 }`}

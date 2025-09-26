@@ -3,6 +3,9 @@ import Image from "next/image";
 import "@/app/components/Strategy/Strategy.css";
 
 export default function Strategy() {
+  const scheduleCall = () => {
+    window.location.href = "/Form";
+  };
   return (
     <div className="strategy-container">
       <div className="strategy-1rst-container">
@@ -35,7 +38,7 @@ export default function Strategy() {
               outcomes and brand awareness. We are firm believers that success
               lies in creative collaboration with our clients."
             </p>
-            <a href="#" className="strategy-link">
+            <a onClick={scheduleCall} className="strategy-link">
               Schedule a Call
             </a>
           </div>

@@ -3,7 +3,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-/* Contenedor principal para la superposición */
 .branding-container {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,6 @@ body {
   position: relative;
 }
 
-/* Estilos de la imagen */
 .branding-image {
   width: 100%;
   height: 100%;
@@ -23,18 +21,15 @@ body {
   object-position: center top;
 }
 
-/* Cambios para el contenedor de la imagen */
 .branding-image-div {
   width: 100%;
 }
-/* Contenedor del texto */
 .branding-text {
   padding: 50px;
   max-width: 100%;
   position: relative;
 }
 
-/* Efecto de fondo con gradiente lineal (fade) */
 .branding-text::before {
   content: none;
 }
@@ -79,7 +74,6 @@ body {
     height: auto;
   }
 
-  /* Aplica la superposición */
   .branding-image-div {
     position: absolute;
     top: 0;
@@ -95,7 +89,6 @@ body {
     object-position: right top;
   }
 
-  /* El contenedor de texto se superpone a la imagen */
   .branding-text {
     position: relative;
     z-index: 2;
@@ -108,7 +101,6 @@ body {
     justify-content: start;
   }
 
-  /* El degradado de fondo para el texto */
   .branding-text::before {
     content: "";
     position: absolute;

@@ -1,5 +1,4 @@
 .guidelines-main-container {
-  /* Por defecto, se apila (comportamiento de bloque/columna) */
   position: relative;
   overflow-x: hidden;
   min-height: 60vh;
@@ -11,7 +10,6 @@
   display: none;
 }
 
-/* El texto y botones ocupa todo el ancho en móvil */
 .carrusel-btns-text-container {
   width: 100%;
   color: #fff;
@@ -20,7 +18,6 @@
 }
 
 .carrusel-div {
-  /* El carrusel ocupa todo el ancho debajo del texto en móvil */
   width: 100%;
   position: relative;
   overflow: hidden;

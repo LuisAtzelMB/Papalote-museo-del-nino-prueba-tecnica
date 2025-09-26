@@ -5,7 +5,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Estilos para el contenedor principal del header */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -21,7 +20,6 @@ body {
   width: 60%;
 }
 
-/* Oculta la navegación principal en móviles, pero muestra el botón de hamburguesa */
 .header-navbar-div {
   display: none;
   background-color: #f94f4f;
@@ -43,7 +41,6 @@ body {
   margin: 25px 50px;
 }
 
-/* Estilos para el menú modal (oculto por defecto) */
 .mobile-menu {
   position: absolute;
   top: 100%;
@@ -69,7 +66,6 @@ body {
   opacity: 1;
 }
 
-/* Y esto lo agregas para el efecto de la X */
 .hamburger-btn.is-open {
   color: #fff;
 }
@@ -129,12 +125,10 @@ body {
     align-items: center;
     justify-content: center;
   }
-  /* Oculta el botón de hamburguesa en desktop */
   .hamburger-btn {
     display: none;
   }
 
-  /* Muestra la navegación principal en desktop */
   .header-navbar-div {
     display: flex;
     flex-direction: row;
@@ -144,7 +138,6 @@ body {
     padding: 50px 10%;
   }
 
-  /* Oculta el menú modal en desktop */
   .mobile-menu {
     display: none;
   }

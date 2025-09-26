@@ -2,6 +2,10 @@ import Image from "next/image";
 import "@/app/components/ContactSection/ContactSection.css";
 
 export default function ContactSection() {
+  const scheduleCall = () => {
+    window.location.href = "/Form";
+  };
+
   return (
     <div className="contactSection-container">
       <Image
@@ -13,7 +17,7 @@ export default function ContactSection() {
       />
       <div className="contactSection-btn-tex">
         <h1>Let's build something great together.</h1>
-        <button>Schedule a Call</button>
+        <button onClick={scheduleCall}>Schedule a Call</button>
       </div>
     </div>
   );

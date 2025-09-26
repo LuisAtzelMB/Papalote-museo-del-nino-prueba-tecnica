@@ -54,8 +54,8 @@ body {
   padding: 1rem 0rem;
   color: #f94f4f;
   border-bottom: 2px solid #f94f4f;
-  font-weight: 800; /* Extra bold */
-  text-decoration: none; /* Elimina el subrayado por defecto */
+  font-weight: 800;
+  text-decoration: none;
 }
 
 .strategy-link:hover {

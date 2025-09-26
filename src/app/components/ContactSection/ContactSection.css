@@ -1,5 +1,4 @@
 .contactSection-container {
-  /* CLAVE 1: Establece el contexto para el logo absoluto */
   position: relative;
 
   width: 100%;
@@ -7,48 +6,24 @@
   margin-bottom: 8vw;
 }
 
-/* ---------------------------------------------------- */
-/* --- POSICIONAMIENTO DEL LOGO SVG (Salido) --- */
-/* ---------------------------------------------------- */
 .logo-svg-contact {
-  /* CLAVE 2: Necesario para que el SVG se mueva libremente */
   position: absolute;
-
-  /* Mueve el SVG hacia afuera del borde izquierdo */
   left: 0;
-
-  /* Mueve el SVG hacia el centro vertical del contenedor (50%) */
   top: 50%;
+  transform: translate(-50%, -50%);
 
-  /* Mueve el logo a la mitad de su propio ancho (50%) fuera del contenedor */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* CLAVE 3: -50% horizontal (salida) y -50% vertical (centrado) */
-
-  z-index: 10; /* Asegura que esté por encima de cualquier otro elemento */
-
-  /* Estilos para el SVG (si necesitas cambiar el color, usa 'fill' en el padre del SVG) */
+  z-index: 10;
   display: block;
 }
 
-/* ---------------------------------------------------- */
-/* --- CENTRADO DE TEXTO Y BOTÓN --- */
-/* ---------------------------------------------------- */
 .contactSection-btn-tex {
   display: flex;
   flex-direction: row;
-
-  /* Centra horizontalmente todo el bloque de texto/botón */
   align-items: center;
-
-  /* Centra verticalmente si el contenedor es más alto (opcional, basado en el contenedor) */
   justify-content: space-around;
-
-  /* Asegura que ocupe todo el espacio disponible */
   width: 100%;
   height: 100%;
-  text-align: center; /* Centra el texto dentro de los títulos/párrafos */
+  text-align: center;
 }
 
 .contactSection-btn-tex h1 {
