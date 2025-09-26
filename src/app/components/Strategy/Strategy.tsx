@@ -64,7 +64,7 @@ export default function Strategy() {
             <h2>Brand Design</h2>
             <p>
               Keeping the brand design unique and meaningful helps in
-              communicating the brand’s timeless value effectively.
+              communicating the brand&apos;s timeless value effectively.
             </p>
           </div>
           <div className="steps">
